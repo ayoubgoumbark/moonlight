@@ -4,3 +4,11 @@
     background: linear-gradient(180deg, rgba(0,0,0,1) 6%, rgba(161,46,46,0) 100%);
 
 }
+
+.card:hover .card-content{
+
+    visibility: visible;
+    opacity: 1;
+    margin-top:-40px;
+    transition-delay: 0.3s;
+}

@@ -55,7 +55,103 @@ function App() {
           // setup animations and ScrollTriggers for screens 960px wide or greater...
           // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
                  /* aboute / dark trees animation */ 
+                 gsap.from(component.current.querySelector(".top-card"), {
+  
+             
+                  x:"-100%",
+                   scrollTrigger: {
+                     trigger: component.current.querySelector(".top-card "),
+                   
+                     start:"top 60%",
+                     end:"top 80px",
+                scrub:true,
+                
+                    
+                   },
     
+                   
+           
+                 })
+                 gsap.from(component.current.querySelector(".bottom-card"), {
+  
+             
+                  x:"100%",
+                   scrollTrigger: {
+                     trigger: component.current.querySelector(".bottom-card "),
+                   
+                     start:"0px 60%",
+                     end:"top 80px",
+                scrub:true,
+                
+                    
+                   }
+                 })
+    
+                 gsap.from(component.current.querySelector(".right-card"), {
+      
+                 
+                  x:"-100%",
+                   scrollTrigger: {
+                     trigger: component.current.querySelector(".right-card "),
+                   
+                     start:"0px 60%",
+                     end:"top 80px",
+                scrub:true,
+                
+                    
+                   }
+                 })
+    
+    
+    
+                /*  scale images when scroll */
+                gsap.from(component.current.querySelector(".top-card  img"), {
+      
+                 opacity:0,
+                  scale:2,
+                   scrollTrigger: {
+                     trigger: component.current.querySelector(".top-card   "),
+                   
+                     start:"0px 60%",
+                     end:"top 80px",
+                scrub:true,
+                
+                    
+                   },
+    
+                 })
+                 
+                gsap.from(component.current.querySelector(".bottom-card  img"), {
+      
+                  opacity:0,
+                  scale:2,
+                   scrollTrigger: {
+                     trigger: component.current.querySelector(".bottom-card   "),
+                   
+                     start:"0px 60%",
+                     end:"top 80px",
+                scrub:true,
+                
+                    
+                   },
+    
+                 })
+                  
+                gsap.from(component.current.querySelector(".right-card  img"), {
+      
+                  opacity:0,
+                  scale:2,
+                   scrollTrigger: {
+                     trigger: component.current.querySelector(".right-card   "),
+                   
+                     start:"0px 60%",
+                     end:"top 80px",
+                scrub:true,
+                
+                    
+                   },
+    
+                 })
         },
       
         // medium
@@ -193,7 +289,7 @@ trigger: component.current.querySelector(".aboute "),
 start:"top bottom",
 end:"bottom top",
 scrub:true,
-markers:true
+
     
    },
 
@@ -248,39 +344,13 @@ ScrollTrigger.create({
        
 
   
-            /* skills-details  animation    */ 
-            gsap.from(component.current.querySelector(".Skills-details"), {
-  
-              opacity:0,
-              y:100,
-               scrollTrigger: {
-                 trigger: component.current.querySelector(".Skills-details "),
-               
-                 start:"0px 60%",
-                 end:"top 80px",
-            scrub:true
-                
-               },
-       
-             })
+            
+         
 
 
-             
-            /* work-details  animation    */ 
-            gsap.from(component.current.querySelector(".work-details"), {
-  
-              opacity:0,
-              y:100,
-               scrollTrigger: {
-                 trigger: component.current.querySelector(".work-details "),
-               
-                 start:"0px center",
-                 end:"top 80px",
-            scrub:true
-                
-               },
-       
-             })
+          
+
+
   
   
   
